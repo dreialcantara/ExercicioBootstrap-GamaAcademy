@@ -34,10 +34,15 @@
   }
  
 .btn-login:hover {
-    background-color: #6954d0 !important;
+    background-color: #6954d0;
     color: #373737;
 }
 
 .titulo {
     font-family: 'Noto Sans';
+}
+
+.alert-success {
+  background-color: #a99ee3;
+
 }
