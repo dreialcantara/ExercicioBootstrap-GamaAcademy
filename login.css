@@ -1,0 +1,43 @@
+.navbar {
+    font-family: 'Noto Sans';
+  
+}
+.navbar-brand {
+  color: #a99ee3;
+}
+.nav-link {
+  color: #a99ee3;
+
+}
+
+.login {
+    min-height: 100vh;
+  }
+  
+  .bg-image {
+    background-image: url('https://cdn.dribbble.com/users/280617/screenshots/6367206/colors.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-heading {
+    font-weight: 300;
+  }
+  
+  .btn-login {
+    border: none;
+   background-color: #373737 ;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+    color: #a99ee3;
+  }
+ 
+.btn-login:hover {
+    background-color: #6954d0 !important;
+    color: #373737;
+}
+
+.titulo {
+    font-family: 'Noto Sans';
+}
