@@ -1,19 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <title>Financial</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="images-removebg-preview.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="login.css">
+
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
         <div class="container">
-            <a href="#" class="navbar-brand">AulBot</a>
+            <a href="#" class="navbar-brand">
+                <img src="images-removebg-preview.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                AulBot
+            </a>
+
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#menuNavegacao" aria-controls="menuNavegacao" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -21,7 +35,7 @@
 
             </button>
             <div id="menuNavegacao" class="collapse navbar-collapse">
-                <ul class="navbar-nav w-100 d=fles justify-content-end">
+                <ul class="navbar-nav w-100 d-flex justify-content-end">
                     <li class="nav-item">
                         <a href="#" class="nav-link active">Home</a>
                     </li>
@@ -31,7 +45,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">Contato</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown d-none" id="dropdownNav">
                         <a href="#" class="nav-link dropdown-toggle" id="menuUsuario" data-bs-toggle="dropdown">Olá,
                             Andrei.</a>
                         <div class="dropdown-menu" aria-labelledby="menuUsuario">
@@ -43,48 +57,83 @@
             </div>
         </div>
     </nav>
-    <main>
-        <div class="container vh-100 ">
-            <div class="row h-100 d-flex align-items-center justify-content-center">
-                <div class="col-xs-10 col-sm-8 col-md-5">
-                    <div class="card">
-                        <div class="card-header">Acesso ao sistema</div>
-                        <div class="card-body">
-                            <div class="alert alert-success d-none">Logado com sucesso</div>
-                            <form id="frmLogin">
-                                <div class="form-floating md-3">
-                                    <input type="e-mail" class="form-control" id="email" placeholder="nome@email.com"
-                                        label="e-mail">
-                                    <label for="email">Email</label>
-                                </div>
-                                <div class="form-floating md-3">
-                                    <input type="password" class="form-control" id="password" placeholder="Senha"
-                                        label="e-mail">
-                                    <label for="password">Senha</label>
-                                </div>
-                                <div class="row">
-                                    <div class="col-5">
-                                        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+
+
+
+
+
+    <div class="container-fluid ps-md-0">
+        <div class="row g-0">
+            <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+            <div class=" col-md-8 col-lg-6 ">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                <h3 class="login-heading mb-4 titulo">Bem Vindo!</h3>
+
+                                <!-- Sign In Form -->
+                                <div class="alert alert-success d-none">Logado com sucesso</div>
+
+                                <form>
+                                    <div class="form-floating mb-3">
+                                        <input type="email" class="form-control" id="floatingInput"
+                                            placeholder="name@example.com">
+                                        <label for="floatingInput">Email</label>
+                                    </div>
+                                    <div class="form-floating mb-3">
+                                        <input type="password" class="form-control" id="floatingPassword"
+                                            placeholder="Password">
+                                        <label for="floatingPassword">Senha</label>
                                     </div>
 
-                                    <div class="col-5  offset-2">
-                                        <button type="reset" class="btn btn-secondary w-100">Resetar</button>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="rememberPasswordCheck">
+                                        <label class="form-check-label" for="rememberPasswordCheck">
+                                            Lembrar senha
+                                        </label>
                                     </div>
-                                </div>
 
-                            </form>
+                                    <div class="d-grid">
+                                        <button id="btnSubmit" class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2 "
+                                            type="button">Entrar</button>
+                                        <div class="text-center">
+                                            <a class="small" href="#">Esqueceu a Senha?</a>
+                                        </div>
+                                        <div class="text-center">
 
 
+                                        </div>
 
+                                    </div>
+
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-            crossorigin="anonymous"></script>
+    </div>
+
+
+
+
+<!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="/js/loginpage.js"></script>
 </body>
 
 </html>

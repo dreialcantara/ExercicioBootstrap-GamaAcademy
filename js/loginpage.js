@@ -6,7 +6,7 @@ tituloNav.onmouseover = () => {
     tituloNav.classList.add("animate__animated", "animate__fadeIn");
     setTimeout(function() {
         tituloNav.classList.remove('animate__animated','animate__fadeIn');
-      }, 2000)
+      }, 500)
 }
 
 
