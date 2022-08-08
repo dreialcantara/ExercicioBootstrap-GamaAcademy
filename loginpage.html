@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="login.css">
 
 </head>
@@ -34,7 +35,7 @@
 
             </button>
             <div id="menuNavegacao" class="collapse navbar-collapse">
-                <ul class="navbar-nav w-100 d=fles justify-content-end">
+                <ul class="navbar-nav w-100 d-flex justify-content-end">
                     <li class="nav-item">
                         <a href="#" class="nav-link active">Home</a>
                     </li>
@@ -44,7 +45,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link">Contato</a>
                     </li>
-                    <li class="nav-item dropdown d-none">
+                    <li class="nav-item dropdown d-none" id="dropdownNav">
                         <a href="#" class="nav-link dropdown-toggle" id="menuUsuario" data-bs-toggle="dropdown">Olá,
                             Andrei.</a>
                         <div class="dropdown-menu" aria-labelledby="menuUsuario">
@@ -95,8 +96,8 @@
                                     </div>
 
                                     <div class="d-grid">
-                                        <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2"
-                                            type="submit">Entrar</button>
+                                        <button id="btnSubmit" class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2 "
+                                            type="button">Entrar</button>
                                         <div class="text-center">
                                             <a class="small" href="#">Esqueceu a Senha?</a>
                                         </div>
@@ -119,7 +120,8 @@
 
 
 
-
+<!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
@@ -130,7 +132,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
         crossorigin="anonymous"></script>
-    <script src="/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="/js/loginpage.js"></script>
 </body>
 
 </html>
